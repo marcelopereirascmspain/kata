@@ -1,19 +1,15 @@
 /* @flow */
 
-function fizzbuzz(number/*: number */)/* : string */ {
-  if (number % 15 === 0) {
-    return "FizzBuzz";
-  }
+function isMultipleOf(n, possibleMultiple) {
+  return possibleMultiple % n === 0;
+}
 
-  if (number % 3 === 0) {
-    return "Fizz";
-  }
+function fizzbuzz(n/*: number */)/* : string */ {
+  if (isMultipleOf(3, n) && isMultipleOf(5, n)) return "FizzBuzz";
+  if (isMultipleOf(3, n)) return "Fizz";
+  if (isMultipleOf(5, n)) return "Buzz";
 
-  if (number % 5 === 0) {
-    return "Buzz";
-  }
-
-  return number.toString();
+  return n.toString();
 }
 
 module.exports = fizzbuzz;
