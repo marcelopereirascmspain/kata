@@ -1,3 +1,5 @@
+/* @flow */
+
 var fizzbuzz = require("../src/fizzbuzz");
 var expect = require("expect");
 
