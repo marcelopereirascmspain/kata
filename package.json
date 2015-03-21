@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expect": "^1.6.0",
     "lodash": "^3.5.0"
   },
   "devDependencies": {
