@@ -1,4 +1,4 @@
-import fizzbuzz from "../src/fizzbuzz";
+import fizzbuzz from "../src/lib/fizzbuzz";
 import expect from "expect";
 
 describe("fizzbuzz", () => {

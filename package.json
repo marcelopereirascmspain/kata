@@ -7,12 +7,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register",
+    "print": "./node_modules/babel/bin/babel-node src/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expect": "^1.6.0"
+    "expect": "^1.6.0",
+    "lodash": "^3.5.0"
   },
   "devDependencies": {
     "babel": "^4.7.16",
