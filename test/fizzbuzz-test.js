@@ -4,22 +4,6 @@ var fizzbuzz = require("../src/fizzbuzz");
 var expect = require("expect");
 
 describe("fizzbuzz", function () {
-  it("should return the string 1 if passed the number 1", function () {
-    expect(fizzbuzz(1)).toBe("1");
-  });
-
-  it("should return the string Fizz if passed the number 3", function () {
-    expect(fizzbuzz(3)).toBe("Fizz");
-  });
-
-  it("should return the string Fizz if passed the number 6", function () {
-    expect(fizzbuzz(6)).toBe("Fizz");
-  });
-
-  it("should return the string Fizz if passed the number 9", function () {
-    expect(fizzbuzz(9)).toBe("Fizz");
-  });
-
   it("should return the string Fizz if passed a multiple of three", function () {
     [3, 6, 9, 33, 96, 243, 303].forEach(function (number) {
       expect(fizzbuzz(number)).toBe("Fizz");
