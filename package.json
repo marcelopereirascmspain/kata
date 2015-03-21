@@ -7,8 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register",
-    "typecheck": "flow check --lib interfaces/"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register"
   },
   "author": "",
   "license": "ISC",

@@ -1,5 +1,3 @@
-/* @flow */
-
 import fizzbuzz from "../src/fizzbuzz";
 import expect from "expect";
 
