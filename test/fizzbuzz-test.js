@@ -4,13 +4,13 @@ var fizzbuzz = require("../src/fizzbuzz");
 var expect = require("expect");
 
 describe("fizzbuzz", function () {
-  it("should return the string Fizz if passed a multiple of three", function () {
+  it("should return the string Fizz if passed a multiple of three but not five", function () {
     [3, 6, 9, 33, 96, 243, 303].forEach(function (number) {
       expect(fizzbuzz(number)).toBe("Fizz");
     });
   });
 
-  it("should return the string Buzz if passed a multiple of five", function () {
+  it("should return the string Buzz if passed a multiple of five but not three", function () {
     [5, 10, 25, 50, 110, 290].forEach(function (number) {
       expect(fizzbuzz(number)).toBe("Buzz");
     });
