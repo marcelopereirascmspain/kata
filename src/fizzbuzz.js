@@ -1,23 +1,16 @@
-/* @flow */
+import partial from "partial";
 
-function isMultipleOf(n/*: number */, possibleMultiple/*: number */)/* : boolean */ {
-  return possibleMultiple % n === 0;
-}
+var isMultipleOf = (n, possibleMultiple) => possibleMultiple % n === 0;
+var isMultipleOfThree = partial(isMultipleOf, 3);
+var isMultipleOfFive = partial(isMultipleOf, 5);
+var isMultipleOfThreeAndFive = (n) => isMultipleOfThree(n) && isMultipleOfFive(n);
 
-function isMultipleOfThree(possibleMultiple/*: number */)/* : boolean */ {
-  return isMultipleOf(3, possibleMultiple);
-}
-
-function isMultipleOfFive(possibleMultiple/*: number */)/* : boolean */ {
-  return isMultipleOf(5, possibleMultiple);
-}
-
-function fizzbuzz(n/*: number */)/* : string */ {
-  if (isMultipleOfThree(n) && isMultipleOfFive(n)) return "FizzBuzz";
+var fizzbuzz = (n) => {
+  if (isMultipleOfThreeAndFive(n)) return "FizzBuzz";
   if (isMultipleOfThree(n)) return "Fizz";
   if (isMultipleOfFive(n)) return "Buzz";
 
   return n.toString();
 }
 
-module.exports = fizzbuzz;
+export default fizzbuzz;

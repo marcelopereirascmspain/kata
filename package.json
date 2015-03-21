@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register",
     "typecheck": "flow check --lib interfaces/"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "expect": "^1.6.0"
   },
   "devDependencies": {
+    "babel": "^4.7.16",
     "expect": "^1.6.0",
     "mocha": "^2.2.1"
   }
